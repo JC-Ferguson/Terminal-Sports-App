@@ -1,53 +1,53 @@
 require_relative "./teams"
-
 ## Teams created and points assigned
 def ladder_creation
-    cronulla_sharks= Teams.new
+    team_creation
+    # cronulla_sharks= Teams.new
       sharks_points=cronulla_sharks.points(24)
 
-    melbourne_storm= Teams.new
+    # melbourne_storm= Teams.new
       storm_points=melbourne_storm.points(40)
 
-    brisbane_broncos= Teams.new   
+    # brisbane_broncos= Teams.new   
       broncos_points=brisbane_broncos.points(25)
 
-    sydney_roosters= Teams.new   
+    # sydney_roosters= Teams.new   
       roosters_points=sydney_roosters.points(36)
 
-    parramatta_eels= Teams.new   
+    # parramatta_eels= Teams.new   
       eels_points=parramatta_eels.points(28)
 
-    canberra_raiders= Teams.new   
+    # canberra_raiders= Teams.new   
       raiders_points=canberra_raiders.points(32)
 
-    manly_sea_eagles= Teams.new   
+    # manly_sea_eagles= Teams.new   
       sea_eagles_points=manly_sea_eagles.points(30)
 
-    south_sydney_rabbitohs= Teams.new   
+    # south_sydney_rabbitohs= Teams.new   
       rabbitohs_points=south_sydney_rabbitohs.points(32)
 
-    north_queensland_cowboys= Teams.new   
+    # north_queensland_cowboys= Teams.new   
       cowboys_points=north_queensland_cowboys.points(20)
 
-    canterbury_bulldogs= Teams.new   
+    # canterbury_bulldogs= Teams.new   
       bulldogs_points=canterbury_bulldogs.points(20)
 
-    penrith_panthers= Teams.new   
+    # penrith_panthers= Teams.new   
       panthers_points=penrith_panthers.points(22)
 
-    new_zealand_warriors= Teams.new   
+    # new_zealand_warriors= Teams.new   
       warriors_points=new_zealand_warriors.points(19)
 
-    newcastle_knights= Teams.new   
+    # newcastle_knights= Teams.new   
       knights_points=newcastle_knights.points(22)
 
-    st_george_illawarra_dragons= Teams.new   
+    # st_george_illawarra_dragons= Teams.new   
       dragons_points=st_george_illawarra_dragons.points(16)
 
-    wests_tigers= Teams.new   
+    # wests_tigers= Teams.new   
       tigers_points=wests_tigers.points(24)
    
-    gold_coast_titans=Teams.new   
+    # gold_coast_titans=Teams.new   
       titans_points=gold_coast_titans.points(10)   
 
        ladder={}
@@ -70,5 +70,3 @@ def ladder_creation
 
        puts rankings=ladder.sort_by { |team,points| points}.reverse
 end
-
-ladder_creation
