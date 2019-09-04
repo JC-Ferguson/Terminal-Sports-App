@@ -9,30 +9,36 @@ class League
 
     def team_creation
         @teams = {
-            cronulla_sharks: Team.new("Cronulla Sharks"),
-            melbourne_storm: Team.new("Melbourne Storm"),
-            brisbane_broncos: Team.new("Brisbane Broncos"),   
-            sydney_roosters: Team.new("Sydney Roosters"),   
-            parramatta_eels: Team.new("Parramatta Eels"),   
-            canberra_raiders: Team.new("Canberra Raiders"),   
-            manly_sea_eagles: Team.new("Manly Sea Eagles"),   
-            south_sydney_rabbitohs: Team.new("South Sydney Rabbitohs"),   
-            north_queensland_cowboys: Team.new("North Queensland Cowboys"),   
-            canterbury_bulldogs: Team.new("Canterbury-Bankstown Bulldogs"),   
-            penrith_panthers: Team.new("Penrith Panthers"),  
-            new_zealand_warriors: Team.new("New Zealand Warriors"), 
-            newcastle_knights: Team.new("Newcastl Knights"),   
-            st_george_illawarra_dragons: Team.new("St George Illawarra Dragons"),   
-            wests_tigers: Team.new("Wests Tigers"),   
-            gold_coast_titans:Team.new("Gold Coast Titans")
+            cronulla_sharks: Team.new("Cronulla Sharks", 24, 11, 12, 489, 456),
+            melbourne_storm: Team.new("Melbourne Storm", 40, 19, 4, 607, 284),
+            brisbane_broncos: Team.new("Brisbane Broncos", 25, 11, 11, 418, 459),   
+            sydney_roosters: Team.new("Sydney Roosters", 36, 17, 6, 617, 347),   
+            parramatta_eels: Team.new("Parramatta Eels", 28, 13, 10, 501, 457),   
+            canberra_raiders: Team.new("Canberra Raiders", 32, 15, 8, 504, 350),   
+            manly_sea_eagles: Team.new("Manly Sea Eagles", 30, 14, 9, 480, 414),   
+            south_sydney_rabbitohs: Team.new("South Sydney Rabbitohs", 32, 15, 8, 505, 407),   
+            north_queensland_cowboys: Team.new("North Queensland Cowboys", 20, 9, 14, 362, 476),   
+            canterbury_bulldogs: Team.new("Canterbury-Bankstown Bulldogs", 20, 9, 14, 296, 463),   
+            penrith_panthers: Team.new("Penrith Panthers", 22, 10, 13, 359, 464),  
+            new_zealand_warriors: Team.new("New Zealand Warriors", 19, 8, 14, 409, 554), 
+            newcastle_knights: Team.new("Newcastle Knights", 22, 10, 7, 475, 468),   
+            st_george_illawarra_dragons: Team.new("St George Illawarra Dragons", 16, 7, 16, 403, 559),   
+            wests_tigers: Team.new("Wests Tigers", 24, 11, 12, 467, 461),   
+            gold_coast_titans:Team.new("Gold Coast Titans", 10, 4, 19, 354, 627)
         }
     end  
 end
 
 class Team
-    attr_reader :games_played, :byes
-    def initialize(name)
+    attr_reader :games_played, :byes, :points, :games_won, :games_lost, :points_scored, :points_conceded
+
+    def initialize(name, points, games_won, games_lost, points_scored, points_conceded)
         @name=name
+        @points=points
+        @games_won=games_won
+        @games_lost=games_lost
+        @points_scored=points_scored
+        @points_conceded=points_conceded
         @games_played= 23
         @byes= 1
     end
@@ -61,24 +67,24 @@ class Team
 
     end
 
-    def points(value)
-        @points=(value)
-    end
+    # def points(value)
+    #     @points=(value)
+    # end
 
-    def games_won(won)
-        @games_won=won
-    end
+    # def games_won(won)
+    #     @games_won=won
+    # end
     
-    def games_lost(lost)
-        @games_lost=lost
-    end
+    # def games_lost(lost)
+    #     @games_lost=lost
+    # end
    
-    def points_scored(scored)
-        @points_scored=scored
-    end
+    # def points_scored(scored)
+    #     @points_scored=scored
+    # end
 
-    def points_conceded(against)
-        @points_conceded=against
-    end
+    # def points_conceded(against)
+    #     @points_conceded=against
+    # end
 
 end

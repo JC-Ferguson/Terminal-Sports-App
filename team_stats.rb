@@ -1,23 +1,24 @@
 require_relative "./teams"
 def team_stats(nrl)
-sharks_points=nrl.teams[:cronulla_sharks].points(24)
-sharks_wins=nrl.teams[:cronulla_sharks].games_won(11)
-sharks_losses=nrl.teams[:cronulla_sharks].games_lost(12)
-sharks_points_for=nrl.teams[:cronulla_sharks].points_scored(489)
-sharks_points_against=nrl.teams[:cronulla_sharks].points_conceded(456)
+# sharks_points=nrl.teams[:cronulla_sharks].points(24)
+# sharks_wins=nrl.teams[:cronulla_sharks].games_won(11)
+# sharks_losses=nrl.teams[:cronulla_sharks].games_lost(12)
+# sharks_points_for=nrl.teams[:cronulla_sharks].points_scored(489)
+# sharks_points_against=nrl.teams[:cronulla_sharks].points_conceded(456)
 
 team_select= gets.chomp.downcase
-if team_select== ("cronulla" || "sharks" || "cronulla sharks")
+case team_select
+when ("cronulla" || "sharks" || "cronulla sharks")
 puts "Cronulla Sutherland Sharks Stats as of round 24\n
 Games Played          #{nrl.teams[:cronulla_sharks].games_played}\n
-Points                #{sharks_points}\n
-Games Won             #{sharks_wins}\n
-Games Lost            #{sharks_losses}\n
+Points                #{nrl.teams[:cronulla_sharks].points}\n
+Games Won             #{nrl.teams[:cronulla_sharks].games_won}\n
+Games Lost            #{nrl.teams[:cronulla_sharks].games_lost}\n
 Byes                  #{nrl.teams[:cronulla_sharks].byes}\n
-Win Percentage        #{ '%.2f' % ((sharks_wins / 23.0) * 100)}\n
-Points Scored         #{sharks_points_for}\n
-Points Conceded       #{sharks_points_against}\n
-Points Differential   #{sharks_points_for - sharks_points_against}"
+Win Percentage        #{ '%.2f' % ((nrl.teams[:cronulla_sharks].games_won / 23.0) * 100)}\n
+Points Scored         #{nrl.teams[:cronulla_sharks].points_scored}\n
+Points Conceded       #{nrl.teams[:cronulla_sharks].points_conceded}\n
+Points Differential   #{nrl.teams[:cronulla_sharks].points_scored - nrl.teams[:cronulla_sharks].points_conceded}"
 end 
 
 end
