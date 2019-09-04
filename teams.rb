@@ -1,7 +1,40 @@
-class Teams
-    attr_reader :games_played
+class League
     def initialize
-        @games_played= 25
+        team_creation
+    end
+
+    def teams
+        @teams
+    end
+
+    def team_creation
+        @teams = {
+            cronulla_sharks: Team.new("Cronulla Sharks"),
+            melbourne_storm: Team.new("Melbourne Storm"),
+            brisbane_broncos: Team.new("Brisbane Broncos"),   
+            sydney_roosters: Team.new("Sydney Roosters"),   
+            parramatta_eels: Team.new("Parramatta Eels"),   
+            canberra_raiders: Team.new("Canberra Raiders"),   
+            manly_sea_eagles: Team.new("Manly Sea Eagles"),   
+            south_sydney_rabbitohs: Team.new("South Sydney Rabbitohs"),   
+            north_queensland_cowboys: Team.new("North Queensland Cowboys"),   
+            canterbury_bulldogs: Team.new("Canterbury-Bankstown Bulldogs"),   
+            penrith_panthers: Team.new("Penrith Panthers"),  
+            new_zealand_warriors: Team.new("New Zealand Warriors"), 
+            newcastle_knights: Team.new("Newcastl Knights"),   
+            st_george_illawarra_dragons: Team.new("St George Illawarra Dragons"),   
+            wests_tigers: Team.new("Wests Tigers"),   
+            gold_coast_titans:Team.new("Gold Coast Titans")
+        }
+    end  
+end
+
+class Team
+    attr_reader :games_played, :byes
+    def initialize(name)
+        @name=name
+        @games_played= 23
+        @byes= 1
     end
 
     def team_lineup( fullback, left_wing, right_wing, left_centre, right_centre, halfback, five_eighth,
@@ -32,10 +65,6 @@ class Teams
         @points=(value)
     end
 
-    # def games_played(played)
-    #     @games_played=(played)
-    # end
-
     def games_won(won)
         @games_won=won
     end
@@ -52,26 +81,6 @@ class Teams
         @points_conceded=against
     end
 
-    def points_differential(diff)
-        @points_differential=diff
-    end
 end
 
-# def team_creation
-#     cronulla_sharks= Teams.new
-#     melbourne_storm= Teams.new
-#     brisbane_broncos= Teams.new   
-#     sydney_roosters= Teams.new   
-#     parramatta_eels= Teams.new   
-#     canberra_raiders= Teams.new   
-#     manly_sea_eagles= Teams.new   
-#     south_sydney_rabbitohs= Teams.new   
-#     north_queensland_cowboys= Teams.new   
-#     canterbury_bulldogs= Teams.new   
-#     penrith_panthers= Teams.new  
-#     new_zealand_warriors= Teams.new 
-#     newcastle_knights= Teams.new   
-#     st_george_illawarra_dragons= Teams.new   
-#     wests_tigers= Teams.new   
-#     gold_coast_titans=Teams.new
-# end    
+  
