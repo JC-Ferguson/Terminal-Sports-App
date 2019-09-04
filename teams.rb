@@ -30,7 +30,7 @@ class League
 end
 
 class Team
-    attr_reader :name, :games_played, :byes, :points, :games_won, :games_lost, :points_scored, :points_conceded
+    attr_accessor :name, :games_played, :byes, :points, :games_won, :games_lost, :points_scored, :points_conceded, :team_lineup
 
     def initialize(name, points, games_won, games_lost, points_scored, points_conceded)
         @name=name
