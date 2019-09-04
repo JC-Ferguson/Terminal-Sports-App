@@ -2,22 +2,22 @@ require_relative "./teams"
 ## Teams created and points assigned
 def ladder_creation(nrl)
 
-    sharks_points=nrl.teams[:cronulla_sharks].points(24)
-    storm_points=nrl.teams[:melbourne_storm].points(40)
-    broncos_points=nrl.teams[:brisbane_broncos].points(25)
-    roosters_points=nrl.teams[:sydney_roosters].points(36)
-    eels_points=nrl.teams[:parramatta_eels].points(28)
-    raiders_points=nrl.teams[:canberra_raiders].points(32)
-    sea_eagles_points=nrl.teams[:manly_sea_eagles].points(30)
-    rabbitohs_points=nrl.teams[:south_sydney_rabbitohs].points(32)
-    cowboys_points=nrl.teams[:north_queensland_cowboys].points(20)
-    bulldogs_points=nrl.teams[:canterbury_bulldogs].points(20)
-    panthers_points=nrl.teams[:penrith_panthers].points(22)
-    warriors_points=nrl.teams[:new_zealand_warriors].points(19)
-    knights_points=nrl.teams[:newcastle_knights].points(22)
-    dragons_points=nrl.teams[:st_george_illawarra_dragons].points(16)
-    tigers_points=nrl.teams[:wests_tigers].points(24)
-    titans_points=nrl.teams[:gold_coast_titans].points(10)
+    sharks_points=nrl.teams[:cronulla_sharks].points
+    storm_points=nrl.teams[:melbourne_storm].points
+    broncos_points=nrl.teams[:brisbane_broncos].points
+    roosters_points=nrl.teams[:sydney_roosters].points
+    eels_points=nrl.teams[:parramatta_eels].points
+    raiders_points=nrl.teams[:canberra_raiders].points
+    sea_eagles_points=nrl.teams[:manly_sea_eagles].points
+    rabbitohs_points=nrl.teams[:south_sydney_rabbitohs].points
+    cowboys_points=nrl.teams[:north_queensland_cowboys].points
+    bulldogs_points=nrl.teams[:canterbury_bulldogs].points
+    panthers_points=nrl.teams[:penrith_panthers].points
+    warriors_points=nrl.teams[:new_zealand_warriors].points
+    knights_points=nrl.teams[:newcastle_knights].points
+    dragons_points=nrl.teams[:st_george_illawarra_dragons].points
+    tigers_points=nrl.teams[:wests_tigers].points
+    titans_points=nrl.teams[:gold_coast_titans].points
 
        ladder={}
        ladder["Cronulla Sharks"]= sharks_points

@@ -30,7 +30,7 @@ class League
 end
 
 class Team
-    attr_reader :games_played, :byes, :points, :games_won, :games_lost, :points_scored, :points_conceded
+    attr_reader :name, :games_played, :byes, :points, :games_won, :games_lost, :points_scored, :points_conceded
 
     def initialize(name, points, games_won, games_lost, points_scored, points_conceded)
         @name=name
@@ -66,25 +66,5 @@ class Team
             puts @interchange_4=interchange_4
 
     end
-
-    # def points(value)
-    #     @points=(value)
-    # end
-
-    # def games_won(won)
-    #     @games_won=won
-    # end
-    
-    # def games_lost(lost)
-    #     @games_lost=lost
-    # end
-   
-    # def points_scored(scored)
-    #     @points_scored=scored
-    # end
-
-    # def points_conceded(against)
-    #     @points_conceded=against
-    # end
 
 end
