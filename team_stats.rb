@@ -70,4 +70,3 @@ team_select= gets.chomp.downcase
     end
 
 end
-
