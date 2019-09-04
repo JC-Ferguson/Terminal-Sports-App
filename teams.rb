@@ -82,5 +82,3 @@ class Team
     end
 
 end
-
-  

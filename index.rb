@@ -1,5 +1,6 @@
 require_relative "./teams"
 require_relative "./ladder"
+require_relative "./team_stats"
 
 nrl = League.new
 
@@ -14,7 +15,7 @@ puts "Hi, welcome to the Rugby League App\nPlease choose what you would like to 
 
     elsif option=="select team"
         puts "Welcome to the team stat selector.\n For more insight into a team's stats please selct a team"
-            
+            team_stats(nrl)
 
     else
 
