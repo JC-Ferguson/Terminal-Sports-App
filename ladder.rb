@@ -1,4 +1,6 @@
 require_relative "./teams"
+require "colorize"
+
 ## Teams created and points assigned
 def ladder_creation(nrl)
 
@@ -20,25 +22,26 @@ def ladder_creation(nrl)
     titans_points=nrl.teams[:gold_coast_titans].points
 
        ladder={}
-       ladder["Cronulla Sharks"]= sharks_points
-       ladder["Melbourne Storm"]= storm_points
-       ladder["South Sydney Rabbitohs"]= rabbitohs_points
-       ladder["Sydney Roosters"]= roosters_points
-       ladder["Parramatta Eels"]= eels_points
-       ladder["Manly Sea Eagles"]= sea_eagles_points
-       ladder["North Queensland Cowboys"]= cowboys_points
-       ladder["Canberra Raiders"]= raiders_points
-       ladder["New Zealand Warriors"]= warriors_points
-       ladder["Canterbury Bulldogs"]= bulldogs_points
-       ladder["Brisbane Broncos"]= broncos_points
-       ladder["Gold Coast Titans"]= titans_points
-       ladder["St George Illawarra Dragons"]= dragons_points
-       ladder["Wests Tigers"]= tigers_points
-       ladder["Penrith Panthers"]= panthers_points
-       ladder["Newcastle Knights"]= knights_points
+       ladder["Cronulla Sharks".colorize(:color => :white , :background => :light_blue)]= sharks_points
+       ladder["Melbourne Storm".colorize(:color => :yellow, :background => :purple)]= storm_points
+       ladder["South Sydney Rabbitohs".colorize(:color => :green, :background => :red)]= rabbitohs_points
+       ladder["Sydney Roosters".colorize(:color => :red, :background => :blue)]= roosters_points
+       ladder["Parramatta Eels".colorize(:color => :yellow, :background => :blue)]= eels_points
+       ladder["Manly Sea Eagles".colorize(:color => :white, :background => :dark_red)]= sea_eagles_points
+       ladder["North Queensland Cowboys".colorize(:color => :yellow , :background => :navy_blue)]= cowboys_points
+       ladder["Canberra Raiders".colorize(:color => :white, :background => :green)]= raiders_points
+       ladder["New Zealand Warriors".colorize(:color => :white, :background => :black)]= warriors_points
+       ladder["Canterbury Bulldogs".colorize(:color => :white, :background => :blue)]= bulldogs_points
+       ladder["Brisbane Broncos".colorize(:color => :yellow, :background => :red)]= broncos_points
+       ladder["Gold Coast Titans".colorize(:color => :yellow, :background => :light_blue)]= titans_points
+       ladder["St George Illawarra Dragons".colorize(:color => :white, :background => :red)]= dragons_points
+       ladder["Wests Tigers".colorize(:color => :orange , :background => :black)]= tigers_points
+       ladder["Penrith Panthers".colorize(:color => :black , :background => :green)]= panthers_points
+       ladder["Newcastle Knights".colorize(:color => :red, :background => :blue)]= knights_points
 
        ## sorts hash of team names and points in descending order
        ## to create ladder where highest is 1st position and lowest is last
 
        puts rankings=ladder.sort_by { |team,points| points}.reverse
+
 end
