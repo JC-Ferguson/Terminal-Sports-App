@@ -257,3 +257,27 @@ To display the draw once again the class is being utilised to call the name and 
 
 ##### Feature 3 - Team Stats
 To implement this feature first identify the stats that are desired to be displayed. These stats were implemented previously in the initialization of the team class, with this class in conjuction with the league class that creates all teams in the league all stats are ready to be called upon when needed. Rather than manually input the stats for all 16 teams use of a method that takes in an argument of the league being created so the method has access to the 16 teams inside of it and another argument that calls the created team from that league. With these two arguments the method will be able to output the stats associated with the team. An array of all the teams is displayed with corresponding numbers and user is prompted to select a number to view a team whose details will be accessed through a case statement.
+
+### READMe
+The Rugby League App is my first time writing a program in the CLI. It was for an assessment for the coding bootcamp I am attending.
+
+The main function of the app is a quick and easy option for rugby league information for people on the go. There are a few features that were unable to be added due to time constraints but i hope to add more and more features in an ongoing project.
+
+## Clone​
+​Clone this to your local repo using 'https://github.com/JC-Ferguson/Terminal-Sports-App.git'
+​
+​
+## Features
+​
+- up to date ladder
+- up to date round fixtures
+- team lineups
+- team statistics
+​
+​
+​
+## Help File
+​
+​
+Dependencies used are:
+colorize gem
