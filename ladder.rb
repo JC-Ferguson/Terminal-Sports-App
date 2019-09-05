@@ -23,19 +23,19 @@ def ladder_creation(nrl)
 
        ladder={}
        ladder["Cronulla Sharks".colorize(:color => :white , :background => :light_blue)]= sharks_points
-       ladder["Melbourne Storm".colorize(:color => :yellow, :background => :purple)]= storm_points
+       ladder["Melbourne Storm".colorize(:color => :yellow, :background => :black)]= storm_points
        ladder["South Sydney Rabbitohs".colorize(:color => :green, :background => :red)]= rabbitohs_points
        ladder["Sydney Roosters".colorize(:color => :red, :background => :blue)]= roosters_points
        ladder["Parramatta Eels".colorize(:color => :yellow, :background => :blue)]= eels_points
-       ladder["Manly Sea Eagles".colorize(:color => :white, :background => :dark_red)]= sea_eagles_points
-       ladder["North Queensland Cowboys".colorize(:color => :yellow , :background => :navy_blue)]= cowboys_points
+       ladder["Manly Sea Eagles".colorize(:color => :red, :background => :white)]= sea_eagles_points
+       ladder["North Queensland Cowboys".colorize(:color => :yellow , :background => :light_blue)]= cowboys_points
        ladder["Canberra Raiders".colorize(:color => :white, :background => :green)]= raiders_points
        ladder["New Zealand Warriors".colorize(:color => :white, :background => :black)]= warriors_points
        ladder["Canterbury Bulldogs".colorize(:color => :white, :background => :blue)]= bulldogs_points
        ladder["Brisbane Broncos".colorize(:color => :yellow, :background => :red)]= broncos_points
        ladder["Gold Coast Titans".colorize(:color => :yellow, :background => :light_blue)]= titans_points
        ladder["St George Illawarra Dragons".colorize(:color => :white, :background => :red)]= dragons_points
-       ladder["Wests Tigers".colorize(:color => :orange , :background => :black)]= tigers_points
+       ladder["Wests Tigers".colorize(:color => :black , :background => :red)]= tigers_points
        ladder["Penrith Panthers".colorize(:color => :black , :background => :green)]= panthers_points
        ladder["Newcastle Knights".colorize(:color => :red, :background => :blue)]= knights_points
 

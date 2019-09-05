@@ -117,6 +117,8 @@ def lineups(comp)
             "9. Connor Watson", "10. Daniel Saifiti", "11. Lachlan Fitzgibbon", "12. Mitch Barnett", "13. Tim Glasby",
             "14. Kurt Mann", "15. Herman Ese'ese", "16. Josh King", "17. Aidan Guerra")
 
+    else puts "Invalid selection. Please enter a number between 1-8"
+
     end
 
 end
