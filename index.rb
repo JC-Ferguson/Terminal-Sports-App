@@ -17,6 +17,8 @@ def keep_going
 
          if proceed== "n"
             puts "Thank you for using the Rugby League App.\nGoodbye"
+            sleep(2)
+            system "clear"
             return false
 
          elsif proceed=="y"
@@ -26,6 +28,7 @@ def keep_going
          end
 
     end
+    system "clear"
     return true
 end
 
@@ -43,15 +46,25 @@ end
 
        when  2
           round_draw(nrl)
+          proceed= true
           puts "Would you like to view a team lineup? (Y/N)"
-          view_lineup=gets.chomp.downcase
-          if view_lineup=="y"
-            lineups(nrl)
-          elsif view_lineup != "n" && view_lineup != "y"
-            puts "Invalid Selection. Please enter Y or N"
-          else
-          continue=keep_going
-          end
+       while proceed==true
+           view_lineup=gets.chomp.downcase
+
+           if view_lineup=="y"
+              lineups(nrl)
+              continue=keep_going
+              proceed=false
+           elsif view_lineup != "n" && view_lineup != "y"
+              puts "Invalid Selection. Please enter Y or N"
+           else
+              continue=keep_going
+              proceed=false
+           end
+
+        end
+
+      
 
        when 3
          puts "Welcome to the team stat selector.\nFor more insight into a team's stats please selct a team (1-16)"
