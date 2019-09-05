@@ -1,4 +1,5 @@
 require_relative "./teams"
+require "colorize"
 
 def stat_input(nrl, team)
     puts "#{nrl.teams[team].name} stats as of round 24\n
@@ -14,14 +15,19 @@ def stat_input(nrl, team)
 end
 
 def team_stats(nrl)
-team_array=["1. Cronulla Sharks", "2. Melbourne Storm", "3. Sydney Roosters", "4. South Sydney Rabbitohs",
-            "5. Manly Sea Eagles", "6. Parramatta Eels", "7. Canberra Raiders", "8. Brisbane Broncos",
-            "9. Wests Tigers", "10. Newcastle Knights", "11. Penrith Panthers", "12 Canterbury Bulldogs",
-            "13.North Queenland Cowboys", "14. New Zealand Warriors", "15. St George Illawarra", "16. Gold Coast Titans"]
+team_array=["1. Cronulla Sharks".colorize(:color => :white , :background => :light_blue), "2. Melbourne Storm".colorize(:color => :yellow, :background => :black), 
+            "3. Sydney Roosters".colorize(:color => :red, :background => :blue), "4. South Sydney Rabbitohs".colorize(:color => :green, :background => :red),
+            "5. Manly Sea Eagles".colorize(:color => :red, :background => :white), "6. Parramatta Eels".colorize(:color => :yellow, :background => :blue),  
+            "7. Canberra Raiders".colorize(:color => :white, :background => :green), "8. Brisbane Broncos".colorize(:color => :yellow, :background => :red),
+            "9. Wests Tigers".colorize(:color => :black , :background => :red), "10. Newcastle Knights".colorize(:color => :red, :background => :blue), 
+            "11. Penrith Panthers".colorize(:color => :black , :background => :green), "12 Canterbury Bulldogs".colorize(:color => :white, :background => :blue),
+            "13.North Queenland Cowboys".colorize(:color => :white, :background => :blue), "14. New Zealand Warriors".colorize(:color => :white, :background => :black), 
+            "15. St George Illawarra".colorize(:color => :white, :background => :red), "16. Gold Coast Titans".colorize(:color => :yellow, :background => :light_blue)]
 
 puts team_array
             ## gives user option to input a team to view
 team_select= gets.chomp.to_i
+system "clear"
 
     case team_select
         when 1
