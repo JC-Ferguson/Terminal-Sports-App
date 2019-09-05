@@ -73,6 +73,8 @@ end
 
        when 4
          puts "Thank you for using the Rugby League App.\nGoodbye"
+         sleep(2)
+         system "clear"
          continue=false
 
        else
