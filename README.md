@@ -250,7 +250,10 @@ Goodbye
 
 ### Implementation Plan
 ##### Feature 1 - Display Ladder
+Through the use of classes and methods this feature has been created. The teams are created and during the initialization are given a range of values. One of these values is the points variable. To implement the ladder feature each teams points are called and then appended into an empty hash under the key of the teams name. The hash is then sorted by the values which arranges them according to their point values thus giving the user a ladder based on team points.
 
 ##### Feature 2 - Draw and Lineups
+To display the draw once again the class is being utilised to call the name and through string interpolation inputed to the game matched with their opponent under a date and a corresponding game number. The second aspect of this feature is the Lineups which is why each game required a corresponding number. Use of a case statement based on the game number a teams lineup can be outputted. The team lineup is created through a class method therefore each team only has to call the method then names of pleyers input. The variable of the players name also corresponds to the player position giving the ability to compare players by position.
 
 ##### Feature 3 - Team Stats
+To implement this feature first identify the stats that are desired to be displayed. These stats were implemented previously in the initialization of the team class, with this class in conjuction with the league class that creates all teams in the league all stats are ready to be called upon when needed. Rather than manually input the stats for all 16 teams use of a method that takes in an argument of the league being created so the method has access to the 16 teams inside of it and another argument that calls the created team from that league. With these two arguments the method will be able to output the stats associated with the team. An array of all the teams is displayed with corresponding numbers and user is prompted to select a number to view a team whose details will be accessed through a case statement.
