@@ -5,6 +5,14 @@ require_relative "./draw"
 require_relative "./players"
 require "colorize"
 
+# argv_holder = ARGV
+# for i in argv_holder 
+#     if i=="help" 
+#         puts "Interface is is simple to navigate an option is placed next to a corresponding number,
+#               select that number to view that option otherwise a Y or N option is given to proceed."
+#     end
+# end
+ ## displays message however crashes program unable to fix due to time constraints
 nrl = League.new
 continue = true
 
