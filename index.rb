@@ -48,6 +48,7 @@ end
           round_draw(nrl)
           proceed= true
           puts "Would you like to view a team lineup? (Y/N)"
+
        while proceed==true
            view_lineup=gets.chomp.downcase
 
@@ -67,8 +68,12 @@ end
       
 
        when 3
-         puts "Welcome to the team stat selector.\nFor more insight into a team's stats please selct a team (1-16)"
-            team_stats(nrl)
+         begin
+         puts "Welcome to the team stat selector.\nFor more insight into a team's stats please selct a team (1-16)"  
+         team_stats(nrl)
+         rescue
+            puts "Trouble accessing stats at the moment"
+         end
             continue=keep_going
 
        when 4
