@@ -1,5 +1,7 @@
  # Software Development Plan- Rugby League App
 
+ Link to git hub (https://github.com/JC-Ferguson/Terminal-Sports-App.git)
+
  ### Statement of Purpose and Scope
 
 The Rugby League App is an app which will allow a user to access up to date information on the National Rugby League (NRL) Competition, view the draw for the upcoming week as well as the squads for each team's game. The first option given to the user is the competition ladder. This is done by assigning each team their points for games won and sorting based on those points from highest points score to lowest. The next option is if the user would like to view the draw, this information is displayed through the use of string interpolation with the games numbered giving the user the additional option to view each teams lineups for the given game i.e select a number to view the corresponding game's lineups. The final option is a database of each team's statistics for the year, the user selects a team and an expanded team info page is reached for greater insight into a teams performance. 
